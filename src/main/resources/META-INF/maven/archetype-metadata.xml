@@ -1,0 +1,61 @@
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0
+        http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        name="quickstart">
+    <fileSets>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/api</directory>
+            <includes>
+                <include>SampleAPI.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/endpoints</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/inbound-endpoints</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/local-entries</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/message-processors</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/message-stores</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/proxy-services</directory>
+            <includes>
+                <include>SampleProviderProxy.xml</include>
+                <include>SampleRequestProxy.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/sequences</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/tasks</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/synapse-config/templates</directory>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory/>
+            <includes>
+                <include>.project</include>
+                <include>artifact.xml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <requiredProperties>
+        <requiredProperty key="name"/>
+        <requiredProperty key="description"/>
+    </requiredProperties>
+
+</archetype-descriptor>
+
+

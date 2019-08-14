@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/abc" name="SampleAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <header name="Content-Type" scope="transport" value="application/xml"/>
+            <header name="API-KEY" scope="transport" value="&lt;Sample_API_KEY>"/>
+            <header name="http-method" scope="transport" value="POST"/>
+            <log level="full" separator=",">
+                <property expression="$body" name="API-Request"/>
+            </log>
+            <send>
+                <endpoint>
+                    <http method="get" uri-template="http://www.mocky.io/v2/5d53e22f2f00000f0086124d"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log level="full" separator=","/>
+        </faultSequence>
+    </resource>
+</api>

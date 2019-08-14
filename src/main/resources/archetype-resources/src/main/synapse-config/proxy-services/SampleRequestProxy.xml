@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="SampleRequestProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target faultSequence="" outSequence="">
+        <inSequence>
+            <log separator=",">
+                <property expression="$body" name="IN-Request-Log"/>
+            </log>
+            <send>
+                <endpoint>
+                    <address uri="http://www.example.org/service"/>
+                </endpoint>
+            </send>
+        </inSequence>
+    </target>
+    <publishWSDL key="" preservePolicy="true">
+        <resource key="/default/resource" location="default_location"/>
+    </publishWSDL>
+    <policy key="/default/key"/>
+    <enableSec/>
+</proxy>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="SampleProviderProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log level="full" separator=",">
+                <property expression="$body" name="Provier In request"/>
+            </log>
+            <send>
+                <endpoint>
+                    <http method="get" uri-template="http://www.mocky.io/v2/5d53e22f2f00000f0086124d"/>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log level="full" separator=","/>
+        </faultSequence>
+    </target>
+</proxy>
