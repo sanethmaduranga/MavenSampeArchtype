@@ -54,6 +54,9 @@
     <requiredProperties>
         <requiredProperty key="name"/>
         <requiredProperty key="description"/>
+        <requiredProperty key="ServiceType">
+            <defaultValue>Requester</defaultValue>
+        </requiredProperty>
     </requiredProperties>
 
 </archetype-descriptor>
