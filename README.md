@@ -1,4 +1,4 @@
-# WSO2 Event Handler Maven Archetype <!-- omit in toc -->
+# WSO2 Integration Studio sample Maven Archetype <!-- omit in toc -->
 
 Maven Archetype for Sample projects for WSO2 Integration Studio.
 
@@ -12,13 +12,13 @@ The default value of the `ServiceType` will be used as `Requester`, if not speci
 ## Usage
 
 ```shell
-mvn archetype:generate  -DarchetypeGroupId=com.athiththan.wso2      \
-                        -DarchetypeArtifactId=wso2-event-handlers   \
-                        -DarchetypeVersion=2.0.0                    \
-                        -DgroupId=<Group ID>                        \
-                        -DartifactId=<Artifact ID>                  \
-                        -Dname=<Name>				    \
-			-Ddescription=<Description>		    \
+mvn archetype:generate  -DarchetypeGroupId=sample.archetypes			\
+                        -DarchetypeArtifactId=enterprice.integrator.archetype	\
+                        -DarchetypeVersion=2.0-SNAPSHOT				\
+                        -DgroupId=<Group ID>					\
+                        -DartifactId=<Artifact ID>				\
+                        -Dname=<Name>						\
+			-Ddescription=<Description>				\
 			-DServiceType=<Requester || Provider>
 ```
 
@@ -30,12 +30,12 @@ This branch can be used to generete a sample project including the both `Request
 ## Usage
 
 ```shell
-mvn archetype:generate  -DarchetypeGroupId=com.athiththan.wso2      \
-                        -DarchetypeArtifactId=wso2-event-handlers   \
-                        -DarchetypeVersion=2.0.0                    \
-                        -DgroupId=<Group ID>                        \
-                        -DartifactId=<Artifact ID>                  \
-                        -Dname=<Name>				    \
+mvn archetype:generate  -DarchetypeGroupId=sample.archetypes			\
+                        -DarchetypeArtifactId=enterprice.integrator.archetype	\
+                        -DarchetypeVersion=1.0-SNAPSHOT				\
+                        -DgroupId=<Group ID>		                        \
+                        -DartifactId=<Artifact ID>      		        \
+                        -Dname=<Name>				    		\
 			-Ddescription=<Description>
 ```
 
